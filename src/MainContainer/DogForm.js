@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 
 export default class DogForm extends Component {
-    state = {
-        name: '',
-        age: '',
-        breed: ''
+    constructor(props) {
+        super(props)
+        this.inputRef = React.createRef()
+       
+        state = {
+            name: '',
+            age: '',
+            breed: ''
+        }
     }
+
+
 
     handleSubmit = (event) => {
         let dog = {
